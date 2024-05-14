@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eDF-5a-tnm" customClass="NoEventsCollectionViewCell" customModule="SampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="492" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ett-gk-sJQ">
+                    <rect key="frame" x="15" y="15" width="462" height="93"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-VX-Ojd">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="93"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="k99-OS-KVl"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="No Upcoming Events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-Zy-qDS">
+                            <rect key="frame" x="55" y="0.0" width="407" height="93"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VHZ-FV-7gU"/>
+            <constraints>
+                <constraint firstItem="Ett-gk-sJQ" firstAttribute="centerY" secondItem="eDF-5a-tnm" secondAttribute="centerY" id="MaK-MS-6hD"/>
+                <constraint firstItem="Ett-gk-sJQ" firstAttribute="leading" secondItem="VHZ-FV-7gU" secondAttribute="leading" constant="15" id="Muv-MG-VZJ"/>
+                <constraint firstItem="Ett-gk-sJQ" firstAttribute="centerX" secondItem="eDF-5a-tnm" secondAttribute="centerX" id="hEW-Tx-sR3"/>
+                <constraint firstItem="Ett-gk-sJQ" firstAttribute="top" secondItem="eDF-5a-tnm" secondAttribute="top" constant="15" id="jAr-Eh-FoG"/>
+            </constraints>
+            <connections>
+                <outlet property="messageLabel" destination="uTP-Zy-qDS" id="f2u-Ay-q2q"/>
+            </connections>
+            <point key="canvasLocation" x="166.41221374045801" y="10.211267605633804"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="noData" width="640" height="617"/>
+    </resources>
+</document>

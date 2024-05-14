@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Gt-2e-9MK" customClass="EventCollectionViewCell" customModule="SampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kyt-Xv-pBz">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Time left counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkN-ug-B6F">
+                        <rect key="frame" x="10" y="5.0000000000000009" width="375" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nfR-Uj-L1f">
+                        <rect key="frame" x="0.0" y="27.333333333333329" width="395" height="30.666666666666671"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Team 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8v-be-uGD">
+                                <rect key="frame" x="0.0" y="0.0" width="395" height="14.333333333333334"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Team 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q52-FB-7tl">
+                                <rect key="frame" x="0.0" y="16.333333333333332" width="395" height="14.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-ep-rQP">
+                        <rect key="frame" x="171.66666666666666" y="63" width="52" height="49"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                        <connections>
+                            <action selector="favouriteButtonTapped:" destination="5Gt-2e-9MK" eventType="touchUpInside" id="xMQ-R0-RIa"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CkN-ug-B6F" firstAttribute="leading" secondItem="Kyt-Xv-pBz" secondAttribute="leading" constant="10" id="8tA-e6-ZYg"/>
+                    <constraint firstItem="nfR-Uj-L1f" firstAttribute="leading" secondItem="Kyt-Xv-pBz" secondAttribute="leading" id="Gdk-cW-MXD"/>
+                    <constraint firstItem="CkN-ug-B6F" firstAttribute="centerX" secondItem="Kyt-Xv-pBz" secondAttribute="centerX" id="X2k-jk-nTl"/>
+                    <constraint firstItem="ECz-ep-rQP" firstAttribute="centerX" secondItem="Kyt-Xv-pBz" secondAttribute="centerX" id="YnG-LT-1IN"/>
+                    <constraint firstItem="nfR-Uj-L1f" firstAttribute="top" secondItem="CkN-ug-B6F" secondAttribute="bottom" constant="8" id="d2W-Ac-LM2"/>
+                    <constraint firstItem="nfR-Uj-L1f" firstAttribute="centerX" secondItem="Kyt-Xv-pBz" secondAttribute="centerX" id="dAU-k5-RcE"/>
+                    <constraint firstAttribute="bottom" secondItem="ECz-ep-rQP" secondAttribute="bottom" constant="5" id="lZT-Vr-sPf"/>
+                    <constraint firstItem="CkN-ug-B6F" firstAttribute="top" secondItem="Kyt-Xv-pBz" secondAttribute="top" constant="5" id="mUG-7O-4wJ"/>
+                    <constraint firstItem="ECz-ep-rQP" firstAttribute="top" secondItem="nfR-Uj-L1f" secondAttribute="bottom" constant="5" id="nAt-v8-Zh1"/>
+                    <constraint firstItem="ECz-ep-rQP" firstAttribute="centerX" secondItem="Kyt-Xv-pBz" secondAttribute="centerX" id="qB5-22-cxi"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="395" height="117"/>
+            <connections>
+                <outlet property="countdownLabel" destination="CkN-ug-B6F" id="GjL-KS-Jtx"/>
+                <outlet property="favouriteButton" destination="ECz-ep-rQP" id="CEl-GH-wv8"/>
+                <outlet property="firstParticipantLabel" destination="o8v-be-uGD" id="vkc-xw-NGs"/>
+                <outlet property="secondParticipantLabel" destination="Q52-FB-7tl" id="1Tk-N8-sj4"/>
+            </connections>
+            <point key="canvasLocation" x="373.28244274809157" y="-26.408450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
